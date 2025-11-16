@@ -1,73 +1,144 @@
-# Welcome to your Lovable project
+# Vinodhan - Developer Portfolio
 
-## Project info
+A modern, responsive portfolio website built with React, TypeScript, Tailwind CSS, and Framer Motion.
 
-**URL**: https://lovable.dev/projects/56b1bcc5-fdc1-4d40-9dc0-c958a54660a3
+## 🚀 Features
 
-## How can I edit this code?
+- **Responsive Design**: Mobile-first approach with smooth animations
+- **Dark Theme**: Professional dark theme with lime green accents
+- **Smooth Animations**: Powered by Framer Motion for delightful interactions
+- **GitHub Integration**: Automatically fetches your latest repositories
+- **Contact Form**: Easy-to-use contact form with mailto fallback
+- **SEO Optimized**: Meta tags, sitemap, and robots.txt included
+- **Fast Performance**: Built with Vite for lightning-fast development and builds
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **Vite** - Build tool
+- **Lucide React** - Icons
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/56b1bcc5-fdc1-4d40-9dc0-c958a54660a3) and start prompting.
+## 📦 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 16+ and npm
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd <project-name>
+```
 
-Follow these steps:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) in your browser
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🔧 Configuration
 
-**Use GitHub Codespaces**
+### Personal Information
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Update your personal details in the following files:
 
-## What technologies are used for this project?
+- **Contact info**: `src/components/Hero.tsx`, `src/components/Contact.tsx`, `src/components/Footer.tsx`
+- **Projects**: `src/data/projects.ts`
+- **GitHub username**: `src/lib/github.ts` and `src/components/Projects.tsx` (change "vinodhan07" to your username)
+- **Skills**: `src/components/Skills.tsx`
+- **About content**: `src/components/About.tsx`
 
-This project is built with:
+### Resume
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Replace `public/resume.pdf` with your own resume file.
 
-## How can I deploy this project?
+### SEO
 
-Simply open [Lovable](https://lovable.dev/projects/56b1bcc5-fdc1-4d40-9dc0-c958a54660a3) and click on Share -> Publish.
+Update meta tags in `index.html`:
+- Title
+- Description
+- Open Graph tags
+- Twitter card tags
 
-## Can I connect a custom domain to my Lovable project?
+Update `public/sitemap.xml` with your domain.
 
-Yes, you can!
+## 🚀 Deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Deploy to Vercel
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Vercel will auto-detect Vite and configure the build settings
+4. Click "Deploy"
+
+Alternatively, use the Vercel CLI:
+
+```bash
+npm i -g vercel
+vercel
+```
+
+### Deploy to Netlify
+
+1. Push your code to GitHub
+2. Connect your repository on [Netlify](https://netlify.com)
+3. Set build command: `npm run build`
+4. Set publish directory: `dist`
+5. Click "Deploy"
+
+## 📝 Build Commands
+
+```bash
+# Development
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
+npm run lint
+```
+
+## 🎨 Customization
+
+### Colors
+
+Edit the color scheme in `src/index.css`:
+- `--primary`: Main accent color (lime green by default)
+- `--background`: Background color
+- `--foreground`: Text color
+- Other semantic tokens
+
+### Animations
+
+Animations are configured in:
+- `tailwind.config.ts` - Animation keyframes and utilities
+- Components use Framer Motion for advanced animations
+
+## 📄 License
+
+MIT License - feel free to use this template for your own portfolio!
+
+## 🤝 Contact
+
+- **Email**: vinovb21@gmail.com
+- **GitHub**: [vinodhan07](https://github.com/vinodhan07)
+- **LinkedIn**: [vavinodhan](https://www.linkedin.com/in/vavinodhan/)
+
+---
+
+Built with ❤️ using React, TypeScript, and Tailwind CSS
