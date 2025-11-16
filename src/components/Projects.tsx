@@ -16,7 +16,7 @@ export function Projects() {
     const loadProjects = async () => {
       const githubProjects = await fetchGitHubRepos("vinodhan07");
       if (githubProjects.length > 0) {
-        setProjects(githubProjects);
+        setProjects([...githubProjects, ...staticProjects]);
       }
       setLoading(false);
     };
@@ -70,21 +70,21 @@ export function Projects() {
                       Featured
                     </span>
                   )}
-                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4 flex-grow leading-relaxed">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-muted text-xs rounded-full"
+                        className="px-3 py-1 bg-muted text-foreground text-xs rounded-full"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 mt-auto">
                     <Button
                       variant="outline"
                       size="sm"
@@ -95,6 +95,7 @@ export function Projects() {
                         href={project.repoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="flex items-center justify-center"
                       >
                         <Github className="mr-2" size={16} />
                         Code
@@ -110,6 +111,7 @@ export function Projects() {
                           href={project.demoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="flex items-center justify-center"
                         >
                           <ExternalLink className="mr-2" size={16} />
                           Demo
