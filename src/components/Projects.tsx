@@ -13,15 +13,8 @@ export function Projects() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadProjects = async () => {
-      const githubProjects = await fetchGitHubRepos("vinodhan07");
-      if (githubProjects.length > 0) {
-        setProjects(githubProjects);
-      }
-      setLoading(false);
-    };
-
-    loadProjects();
+    setProjects(staticProjects);
+    setLoading(false);
   }, []);
 
   return (
@@ -70,8 +63,8 @@ export function Projects() {
                       Featured
                     </span>
                   )}
-                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-left">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4 flex-grow text-left leading-relaxed">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.slice(0, 4).map((tech) => (
