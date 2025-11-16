@@ -10,17 +10,31 @@ export interface Project {
 
 export const staticProjects: Project[] = [
   {
-    title: "FinAI HackOps",
-    description: "AI-powered financial operations and automation platform for intelligent financial workflows and decision-making.",
-    tech: ["Python", "TensorFlow", "FastAPI", "React"],
-    repoUrl: "https://github.com/vinodhan07/finai-hackops",
+    title: "E-Commerce Platform",
+    description: "Full-stack e-commerce solution with payment integration, product management, and order tracking.",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    repoUrl: "https://github.com/vinodhan07",
+    demoUrl: "https://example.com",
     featured: true,
   },
   {
-    title: "Gen AI Model",
-    description: "Advanced generative AI model implementation with cutting-edge machine learning techniques and neural networks.",
-    tech: ["Python", "PyTorch", "Transformers", "Hugging Face"],
-    repoUrl: "https://github.com/vinodhan07/gen-ai-model",
+    title: "Task Management App",
+    description: "Collaborative task management tool with real-time updates and team collaboration features.",
+    tech: ["TypeScript", "React", "Firebase", "Tailwind CSS"],
+    repoUrl: "https://github.com/vinodhan07",
     featured: true,
+  },
+  {
+    title: "Weather Dashboard",
+    description: "Real-time weather tracking application with location-based forecasts and interactive maps.",
+    tech: ["React", "OpenWeather API", "Chart.js"],
+    repoUrl: "https://github.com/vinodhan07",
+    demoUrl: "https://example.com",
+  },
+  {
+    title: "Portfolio Builder",
+    description: "SaaS platform for developers to create and customize their portfolio websites without coding.",
+    tech: ["Next.js", "PostgreSQL", "Prisma", "Vercel"],
+    repoUrl: "https://github.com/vinodhan07",
   },
 ];
