@@ -70,7 +70,7 @@ export function Projects() {
                       Featured
                     </span>
                   )}
-                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3 break-words">{project.title}</h3>
                   <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
