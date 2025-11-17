@@ -7,6 +7,7 @@ export interface GitHubRepo {
   homepage: string | null;
   topics: string[];
   stargazers_count: number;
+  languages_url: string;
 }
 
 export async function fetchGitHubRepos(username: string): Promise<Project[]> {
@@ -26,20 +27,51 @@ export async function fetchGitHubRepos(username: string): Promise<Project[]> {
 
     const repos: GitHubRepo[] = await response.json();
 
-    return repos
-      .filter((repo) => !repo.name.includes("dotfiles") && !repo.name.includes("config"))
-      .slice(0, 6)
-      .map((repo) => ({
-        title: repo.name
-          .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-          .join(" "),
-        description: repo.description || "A project built with passion and code.",
-        tech: repo.topics.length > 0 ? repo.topics : ["JavaScript"],
-        repoUrl: repo.html_url,
-        demoUrl: repo.homepage || undefined,
-        featured: repo.stargazers_count > 0,
-      }));
+    // Fetch languages for each repo
+    const reposWithLanguages = await Promise.all(
+      repos
+        .filter((repo) => !repo.name.includes("dotfiles") && !repo.name.includes("config"))
+        .slice(0, 6)
+        .map(async (repo) => {
+          let languages: string[] = [];
+          
+          try {
+            const langResponse = await fetch(repo.languages_url, {
+              headers: {
+                Accept: "application/vnd.github.v3+json",
+              },
+            });
+            
+            if (langResponse.ok) {
+              const langData = await langResponse.json();
+              languages = Object.keys(langData);
+            }
+          } catch (error) {
+            console.error(`Error fetching languages for ${repo.name}:`, error);
+          }
+
+          // Use topics if available, otherwise use languages, fallback to ["JavaScript"]
+          const tech = repo.topics.length > 0 
+            ? repo.topics 
+            : languages.length > 0 
+            ? languages 
+            : ["JavaScript"];
+
+          return {
+            title: repo.name
+              .split("-")
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(" "),
+            description: repo.description || "A project built with passion and code.",
+            tech,
+            repoUrl: repo.html_url,
+            demoUrl: repo.homepage || undefined,
+            featured: repo.stargazers_count > 0,
+          };
+        })
+    );
+
+    return reposWithLanguages;
   } catch (error) {
     console.error("Error fetching GitHub repos:", error);
     return [];
