@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap, Award, Network } from "lucide-react";
-import avatarImg from "@/assets/avatar.png";
+import profileImg from "@/assets/profile.png";
 
 export function About() {
   const ref = useRef(null);
@@ -11,49 +11,59 @@ export function About() {
   return (
     <section id="about" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
-          <span className="text-muted-foreground text-sm font-medium tracking-wider uppercase">
-            INTRODUCTION
-          </span>
-          <h2 className="text-5xl md:text-6xl font-bold mt-2">About.</h2>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left side - Avatar */}
+        <div className="flex gap-8">
+          {/* Vertical accent line */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="relative flex justify-center lg:justify-start"
-          >
-            <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl" />
-              <img 
-                src={avatarImg} 
-                alt="Vinodhan - Full Stack Developer" 
-                className="relative z-10 w-[400px] h-[400px] object-contain"
-              />
-            </motion.div>
-          </motion.div>
+            initial={{ height: 0 }}
+            animate={isInView ? { height: "100%" } : {}}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="w-1 bg-primary rounded-full hidden md:block flex-shrink-0"
+          />
 
-          {/* Right side - Info Cards */}
-          <div className="space-y-6">
-            {/* Education Card */}
+          <div className="flex-1">
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              className="mb-12"
             >
+              <span className="text-muted-foreground text-sm font-medium tracking-wider uppercase">
+                INTRODUCTION
+              </span>
+              <h2 className="text-5xl md:text-6xl font-bold mt-2">About.</h2>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Left side - Avatar */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative flex justify-center lg:justify-start"
+              >
+                <motion.div
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  className="relative"
+                >
+                  <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl" />
+                  <img 
+                    src={profileImg} 
+                    alt="Vinodhan - Full Stack Developer" 
+                    className="relative z-10 w-[350px] h-[350px] object-contain"
+                  />
+                </motion.div>
+              </motion.div>
+
+              {/* Right side - Info Cards */}
+              <div className="space-y-6">
+                {/* Education Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
+                >
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <GraduationCap className="text-primary" size={24} />
@@ -82,13 +92,13 @@ export function About() {
               </div>
             </motion.div>
 
-            {/* Achievements Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
-            >
+                {/* Achievements Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
+                >
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <Award className="text-primary" size={24} />
@@ -111,13 +121,13 @@ export function About() {
               </div>
             </motion.div>
 
-            {/* Experience Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
-            >
+                {/* Experience Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
+                >
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <Network className="text-primary" size={24} />
@@ -146,8 +156,10 @@ export function About() {
                     Co-founder and partner, leading a technology solutions company focused on innovative services.
                   </p>
                 </div>
+                  </div>
+                </motion.div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
