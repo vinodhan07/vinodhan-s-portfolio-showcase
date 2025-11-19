@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Download, Instagram } from "lucide-react";
 import { Button } from "./ui/button";
+import avatarImg from "@/assets/avatar.png";
 
 export function Hero() {
   const scrollToSection = (href: string) => {
@@ -162,7 +163,11 @@ export function Hero() {
             >
               <div className="w-96 h-96 bg-primary/10 rounded-full blur-3xl absolute inset-0 animate-glow" />
               <div className="relative z-10 w-96 h-96 flex items-center justify-center">
-                <span className="text-[200px]">👨‍💻</span>
+                <img 
+                  src={avatarImg} 
+                  alt="Vinodhan Avatar" 
+                  className="w-[400px] h-[400px] object-contain"
+                />
               </div>
             </motion.div>
           </motion.div>
