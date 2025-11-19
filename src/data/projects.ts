@@ -43,16 +43,9 @@ export const staticProjects: Project[] = [
     repoUrl: "https://github.com/vinodhan07/AI_Agents_Intensive_Course_with_Google",
   },
   {
-<<<<<<< HEAD
-    title: "Translator-Model",
-    description: "E-commerce demo application showcasing modern web development practices and responsive design.",
-    tech: ["HTML", "CSS", "JavaScript"],
+    title: "Translator Model",
+    description: "Advanced machine learning model for multi-language translation with high accuracy.",
+    tech: ["Python", "NLP", "TensorFlow"],
     repoUrl: "https://github.com/vinodhan07/Translator-Model",
-=======
-    title: "Fake Kart",
-    description: "E-commerce demo application showcasing modern web development practices and responsive design.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    repoUrl: "https://github.com/vinodhan07/fake-kart",
->>>>>>> bbb1ac407cfcf94a175679b250c92b3f11fc38b3
   },
 ];
