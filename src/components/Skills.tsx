@@ -52,7 +52,7 @@ export function Skills() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-[#1a1d2e] p-6 rounded-2xl border border-gray-800 hover:border-primary/50 transition-colors"
+              className="bg-card/50 backdrop-blur-sm p-6 rounded-2xl border border-border hover:border-primary/50 hover:shadow-[0_0_25px_rgba(var(--primary-rgb),0.15)] transition-all duration-300 hover:scale-105"
             >
               <div className="flex items-start gap-3">
                 <span className="text-primary text-xl mt-1">•</span>
@@ -74,8 +74,8 @@ export function Skills() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
-              whileHover={{ scale: 1.1, y: -5 }}
-              className="bg-card/50 backdrop-blur-sm w-20 h-20 rounded-2xl border border-border/50 flex flex-col items-center justify-center gap-2 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(var(--primary-rgb),0.2)] transition-all group"
+              whileHover={{ scale: 1.15, y: -8 }}
+              className="bg-card/50 backdrop-blur-sm w-20 h-20 rounded-2xl border border-border/50 flex flex-col items-center justify-center gap-2 hover:border-primary hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] transition-all group"
               title={tech.name}
             >
               <img src={tech.logo} alt={tech.name} className="w-10 h-10 object-contain" />
