@@ -33,13 +33,13 @@ export function About() {
               <h2 className="text-5xl md:text-6xl font-bold mt-2">About.</h2>
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              {/* Left side - Avatar */}
+            <div className="space-y-12">
+              {/* Avatar */}
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative flex justify-center lg:justify-start"
+                className="relative flex justify-center"
               >
                 <motion.div
                   animate={{ y: [0, -15, 0] }}
@@ -55,8 +55,8 @@ export function About() {
                 </motion.div>
               </motion.div>
 
-              {/* Right side - Info Cards */}
-              <div className="space-y-6">
+              {/* Education and Achievements - Side by Side */}
+              <div className="grid lg:grid-cols-2 gap-6">
                 {/* Education Card */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -64,33 +64,36 @@ export function About() {
                   transition={{ duration: 0.8, delay: 0.3 }}
                   className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
                 >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-primary/10 rounded-lg">
-                  <GraduationCap className="text-primary" size={24} />
-                </div>
-                <h3 className="text-2xl font-bold">Education</h3>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-foreground">Bachelor of Computer Science</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Sri Eshwar College of Engineering, 2023 – 2027
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Higher Secondary Certificate (HSC)</h4>
-                  <p className="text-muted-foreground text-sm">
-                    PKD Matriculation Higher Secondary School, 2021 – 2023
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Secondary School Leaving Certificate (SSLC)</h4>
-                  <p className="text-muted-foreground text-sm">
-                    PKD Matriculation Higher Secondary School, 2020 – 2021
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <GraduationCap className="text-primary" size={24} />
+                    </div>
+                    <h3 className="text-2xl font-bold">Education</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-foreground">Bachelor of Computer Science and Engineering</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Knowledge Institute of Technology (Up to 3rd Semester)
+                      </p>
+                      <p className="text-muted-foreground text-sm">7.5 CGPA</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Higher Secondary Education (12th)</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Jayarani Matric Hr. Sec. School
+                      </p>
+                      <p className="text-muted-foreground text-sm">66%</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Secondary Education (10th)</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Sri Vidya Mandir Hr. Sec. School, Salem
+                      </p>
+                      <p className="text-muted-foreground text-sm">75%</p>
+                    </div>
+                  </div>
+                </motion.div>
 
                 {/* Achievements Card */}
                 <motion.div
@@ -99,66 +102,66 @@ export function About() {
                   transition={{ duration: 0.8, delay: 0.4 }}
                   className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
                 >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-primary/10 rounded-lg">
-                  <Award className="text-primary" size={24} />
-                </div>
-                <h3 className="text-2xl font-bold">Achievements</h3>
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <h4 className="font-semibold text-foreground">SIH - 2025 Finalist (Internal)</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Smart India Hackathon 2025, Finalist (Internal)
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Second Runner-Up</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Futurepreneur 2025, District Level, Rajalakshmi Institute of Technology (RIT)
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-                {/* Experience Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                  className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
-                >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-primary/10 rounded-lg">
-                  <Network className="text-primary" size={24} />
-                </div>
-                <h3 className="text-2xl font-bold">Experience</h3>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-foreground">Full Stack Developer Intern</h4>
-                  <p className="text-muted-foreground text-sm mb-1">
-                    RAMPeX Technologies (ongoing)
-                  </p>
-                  <p className="text-muted-foreground text-sm">
-                    Engaged in full-stack development, contributing to both front-end and back-end solutions.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Freelance Developer</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Specialized in delivering front-end, back-end, and mobile app solutions to clients.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Founder, NETIZENS IT SOLUTION</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Co-founder and partner, leading a technology solutions company focused on innovative services.
-                  </p>
-                </div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Award className="text-primary" size={24} />
+                    </div>
+                    <h3 className="text-2xl font-bold">Achievements</h3>
+                  </div>
+                  <div className="space-y-3">
+                    <div>
+                      <h4 className="font-semibold text-foreground">Publication</h4>
+                      <p className="text-muted-foreground text-sm">
+                        A Flexible Multi-Task Structure Contextual Modality Attention based Emotion Recognition
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Certifications</h4>
+                      <p className="text-muted-foreground text-sm">• Prompt Engineering (Great Learning)</p>
+                      <p className="text-muted-foreground text-sm">• Java Programming (Thinkverge)</p>
+                      <p className="text-muted-foreground text-sm">• AI for Beginners (HP Foundation)</p>
+                    </div>
                   </div>
                 </motion.div>
               </div>
+
+              {/* Experience Card - Full Width */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Network className="text-primary" size={24} />
+                  </div>
+                  <h3 className="text-2xl font-bold">Experience</h3>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground">Full Stack Developer Intern</h4>
+                    <p className="text-muted-foreground text-sm mb-1">
+                      RAMPeX Technologies (ongoing)
+                    </p>
+                    <p className="text-muted-foreground text-sm">
+                      Engaged in full-stack development, contributing to both front-end and back-end solutions.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Freelance Developer</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Specialized in delivering front-end, back-end, and mobile app solutions to clients.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Founder, NETIZENS IT SOLUTION</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Co-founder and partner, leading a technology solutions company focused on innovative services.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
