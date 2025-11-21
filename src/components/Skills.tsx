@@ -11,20 +11,16 @@ const expertisePoints = [
 ];
 
 const techIcons = [
-  { name: "HTML5", icon: "🟧" },
-  { name: "CSS3", icon: "🔷" },
-  { name: "JavaScript", icon: "🟨" },
-  { name: "React", icon: "⚛️" },
-  { name: "Node.js", icon: "🟢" },
-  { name: "MongoDB", icon: "🍃" },
-  { name: "Redux", icon: "🟣" },
-  { name: "Git", icon: "🔴" },
-  { name: "Figma", icon: "🎨" },
-  { name: "FL Studio", icon: "🎵" },
-  { name: "Next.js", icon: "⬛" },
-  { name: "Tailwind", icon: "💨" },
-  { name: "TypeScript", icon: "🔷" },
-  { name: "AWS", icon: "☁️" },
+  { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+  { name: "HTML5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+  { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "R", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" },
 ];
 
 export function Skills() {
@@ -45,7 +41,7 @@ export function Skills() {
           </span>
           <h2 className="text-5xl md:text-7xl font-bold mt-2 mb-8">SKILLS.</h2>
           <p className="text-gray-300 text-lg leading-relaxed max-w-5xl">
-            As a versatile software engineer, I specialize in end-to-end product development—from intuitive UI/UX design to robust backend architecture. I build scalable and maintainable applications using HTML, CSS, JavaScript, React, React Native, Node.js, and MongoDB. With experience in design tools like Figma and a strong grasp of testing and CI/CD workflows, I ensure quality-driven development and seamless deployments. My holistic approach integrates performance optimization, clean code practices, and user-centric design to deliver impactful digital solutions.
+            As a versatile full-stack developer, I specialize in building scalable web and mobile applications using modern technologies. Proficient in HTML, CSS, JavaScript, React.js, and TypeScript for front-end development, with expertise in Python, Java, and R for back-end solutions. Experienced with AI tools including Docker, Ollama, N8n AI Agent, and Flutter for cross-platform development. I focus on delivering clean, maintainable code while ensuring seamless user experiences and robust application performance.
           </p>
         </motion.div>
 
@@ -78,10 +74,12 @@ export function Skills() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
-              className="bg-[#1a1d2e] w-16 h-16 rounded-2xl border border-gray-800 flex items-center justify-center text-3xl hover:border-primary/50 transition-colors"
+              whileHover={{ scale: 1.1, y: -5 }}
+              className="bg-card/50 backdrop-blur-sm w-20 h-20 rounded-2xl border border-border/50 flex flex-col items-center justify-center gap-2 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(var(--primary-rgb),0.2)] transition-all group"
               title={tech.name}
             >
-              {tech.icon}
+              <img src={tech.logo} alt={tech.name} className="w-10 h-10 object-contain" />
+              <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">{tech.name}</span>
             </motion.div>
           ))}
         </motion.div>
