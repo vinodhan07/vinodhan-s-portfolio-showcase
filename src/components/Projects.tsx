@@ -46,11 +46,11 @@ export function Projects() {
             {[...Array(6)].map((_, i) => (
               <div
                 key={i}
-                className="bg-[#1a1d2e] p-6 rounded-2xl border border-gray-800 animate-pulse"
+                className="bg-card/50 backdrop-blur-sm p-6 rounded-2xl border border-border animate-pulse"
               >
-                <div className="h-4 bg-gray-700 rounded w-3/4 mb-4" />
-                <div className="h-3 bg-gray-700 rounded w-full mb-2" />
-                <div className="h-3 bg-gray-700 rounded w-5/6" />
+                <div className="h-4 bg-muted/30 rounded w-3/4 mb-4" />
+                <div className="h-3 bg-muted/30 rounded w-full mb-2" />
+                <div className="h-3 bg-muted/30 rounded w-5/6" />
               </div>
             ))}
           </div>
@@ -64,8 +64,9 @@ export function Projects() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <motion.div
-                  whileHover={{ y: -4 }}
-                  className="bg-[#1a1d2e] p-6 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all h-full flex flex-col relative group"
+                  whileHover={{ scale: 1.05, y: -4 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  className="bg-card/50 backdrop-blur-sm p-6 rounded-2xl border border-border hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.15)] transition-all h-full flex flex-col relative group"
                 >
                   <a
                     href={project.repoUrl}
