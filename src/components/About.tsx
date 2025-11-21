@@ -62,7 +62,8 @@ export function About() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: 0.3 }}
-                  className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] transition-all"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="p-2 bg-primary/10 rounded-lg">
@@ -100,7 +101,8 @@ export function About() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] transition-all"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="p-2 bg-primary/10 rounded-lg">
@@ -130,7 +132,8 @@ export function About() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all"
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] transition-all"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-2 bg-primary/10 rounded-lg">
