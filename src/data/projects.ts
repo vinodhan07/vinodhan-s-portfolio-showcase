@@ -35,17 +35,20 @@ export const staticProjects: Project[] = [
     description: "Automated workflow agents built with n8n for intelligent task orchestration and process automation.",
     tech: ["JavaScript", "n8n", "Automation", "AI"],
     repoUrl: "https://github.com/vinodhan07/n8n-AI-Automation-Agents",
+    featured: false,
+  },
+  {
+    title: "Translator-Model",
+    description: "E-commerce demo application showcasing modern web development practices and responsive design.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    repoUrl: "https://github.com/vinodhan07/Translator-Model",
+    featured: false,
   },
   {
     title: "AI Agents Intensive Course",
     description: "Comprehensive course materials on building AI agents, covering architecture, prompts, and agent design patterns.",
     tech: ["Jupyter Notebook", "Python", "AI/ML", "Education"],
     repoUrl: "https://github.com/vinodhan07/AI_Agents_Intensive_Course_with_Google",
-  },
-  {
-    title: "Translator Model",
-    description: "Advanced machine learning model for multi-language translation with high accuracy.",
-    tech: ["Python", "NLP", "TensorFlow"],
-    repoUrl: "https://github.com/vinodhan07/Translator-Model",
+    featured: false,
   },
 ];

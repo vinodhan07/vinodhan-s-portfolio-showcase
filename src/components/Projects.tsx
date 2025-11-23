@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { Github } from "lucide-react";
 import { staticProjects, Project } from "@/data/projects";
 import { fetchGitHubRepos } from "@/lib/github";
+import { ProjectsGrid } from "./ProjectsGrid";
 
 export function Projects() {
   const ref = useRef(null);
@@ -42,58 +42,24 @@ export function Projects() {
         </motion.div>
 
         {loading ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...Array(6)].map((_, i) => (
               <div
                 key={i}
-                className="bg-card/50 backdrop-blur-sm p-6 rounded-2xl border border-border animate-pulse"
+                className="bg-card/50 backdrop-blur-sm p-6 rounded-2xl border border-border animate-pulse h-[280px] flex flex-col"
               >
-                <div className="h-4 bg-muted/30 rounded w-3/4 mb-4" />
-                <div className="h-3 bg-muted/30 rounded w-full mb-2" />
-                <div className="h-3 bg-muted/30 rounded w-5/6" />
+                <div className="h-6 bg-muted/30 rounded w-3/4 mb-4" />
+                <div className="h-4 bg-muted/30 rounded w-full mb-2" />
+                <div className="h-4 bg-muted/30 rounded w-5/6 mb-4" />
+                <div className="flex gap-2 mt-auto">
+                  <div className="h-8 bg-muted/30 rounded w-16" />
+                  <div className="h-8 bg-muted/30 rounded w-16" />
+                </div>
               </div>
             ))}
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <motion.div
-                  whileHover={{ scale: 1.05, y: -4 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="bg-card/50 backdrop-blur-sm p-6 rounded-2xl border border-border hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.15)] transition-all h-full flex flex-col relative group"
-                >
-                  <a
-                    href={project.repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute top-6 right-6 text-gray-400 hover:text-primary transition-colors z-10"
-                  >
-                    <Github size={24} />
-                  </a>
-
-                  <h3 className="text-xl font-semibold mb-3 break-words pr-10">{project.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4 flex-grow leading-relaxed">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-primary text-xs font-mono"
-                      >
-                        #{tech}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
+          <ProjectsGrid projects={projects} isInView={isInView} />
         )}
       </div>
     </section>
