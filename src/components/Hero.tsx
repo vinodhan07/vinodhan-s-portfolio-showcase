@@ -161,12 +161,12 @@ export function Hero() {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="relative"
             >
-              <div className="w-96 h-96 bg-primary/10 rounded-full blur-3xl absolute inset-0 animate-glow" />
-              <div className="relative z-10 w-96 h-96 flex items-center justify-center">
+              <div className="w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl absolute inset-0 animate-glow" />
+              <div className="relative z-10 w-[500px] h-[500px] flex items-center justify-center">
                 <img 
                   src={avatarImg} 
                   alt="Vinodhan Avatar" 
-                  className="w-[400px] h-[400px] object-contain"
+                  className="w-[520px] h-[520px] object-contain"
                 />
               </div>
             </motion.div>

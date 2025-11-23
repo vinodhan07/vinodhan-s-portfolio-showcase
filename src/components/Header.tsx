@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "./ui/button";
+import { useTheme } from "next-themes";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -13,6 +14,12 @@ const navLinks = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,6 +69,24 @@ export function Header() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
               </button>
             ))}
+            
+            {/* Theme Toggle Button */}
+            {mounted && (
+              <motion.button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="p-2 rounded-lg bg-card/50 backdrop-blur-sm border border-border hover:bg-card transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? (
+                  <Sun size={20} className="text-primary" />
+                ) : (
+                  <Moon size={20} className="text-primary" />
+                )}
+              </motion.button>
+            )}
+            
             <Button
               onClick={() => scrollToSection("#contact")}
               className="bg-primary text-primary-foreground hover:bg-primary/90"
@@ -70,14 +95,30 @@ export function Header() {
             </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="md:hidden flex items-center gap-3">
+            {mounted && (
+              <motion.button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="p-2 rounded-lg bg-card/50 backdrop-blur-sm border border-border"
+                whileTap={{ scale: 0.95 }}
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? (
+                  <Sun size={20} className="text-primary" />
+                ) : (
+                  <Moon size={20} className="text-primary" />
+                )}
+              </motion.button>
+            )}
+            <button
+              className="text-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
