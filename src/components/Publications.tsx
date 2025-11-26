@@ -1,21 +1,12 @@
 import { motion } from "framer-motion";
-import { BookOpen } from "lucide-react";
+import { BookOpen, ExternalLink } from "lucide-react";
+import { Button } from "./ui/button";
 
 const publications = [
   {
-    title: "Deep Learning Approaches in Computer Vision",
-    venue: "International Journal of Computer Science",
-    description: "Exploring advanced neural network architectures for image recognition and classification tasks.",
-  },
-  {
-    title: "Scalable Microservices Architecture Patterns",
-    venue: "Tech Conference 2024",
-    description: "Best practices for building and deploying distributed systems at scale.",
-  },
-  {
-    title: "Modern Web Development with React and TypeScript",
-    venue: "Web Development Journal",
-    description: "A comprehensive guide to building type-safe, performant web applications.",
+    title: "A Flexible Multi-Task Structure Contextual Modality Attention Based Emotion Recognition",
+    type: "Published Paper",
+    link: "#", // Replace with actual publication link when available
   },
 ];
 
@@ -44,11 +35,26 @@ export function Publications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border border-border rounded-lg p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all"
+              className="border border-border rounded-lg p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all group"
             >
-              <h3 className="text-xl font-bold text-foreground mb-2">{pub.title}</h3>
-              <p className="text-muted-foreground mb-3 italic">{pub.venue}</p>
-              <p className="text-foreground/80">{pub.description}</p>
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {pub.title}
+                  </h3>
+                  <p className="text-muted-foreground italic">{pub.type}</p>
+                </div>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="flex items-center gap-2 whitespace-nowrap"
+                >
+                  <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                    View Publication
+                    <ExternalLink size={16} />
+                  </a>
+                </Button>
+              </div>
             </motion.div>
           ))}
         </div>
