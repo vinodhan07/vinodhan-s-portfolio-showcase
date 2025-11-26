@@ -6,7 +6,7 @@ const publications = [
   {
     title: "A Flexible Multi-Task Structure Contextual Modality Attention Based Emotion Recognition",
     type: "Published Paper",
-    link: "#", // Replace with actual publication link when available
+    link: "https://ieeexplore.ieee.org/abstract/document/11167765",
   },
 ];
 
