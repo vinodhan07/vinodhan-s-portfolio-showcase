@@ -145,7 +145,7 @@ export function About() {
                   <div>
                     <h4 className="font-semibold text-foreground">Full Stack Developer Intern</h4>
                     <p className="text-muted-foreground text-sm mb-1">
-                      RAMPeX Technologies (ongoing)
+                      MEE Technologies
                     </p>
                     <p className="text-muted-foreground text-sm">
                       Engaged in full-stack development, contributing to both front-end and back-end solutions.
@@ -154,13 +154,7 @@ export function About() {
                   <div>
                     <h4 className="font-semibold text-foreground">Freelance Developer</h4>
                     <p className="text-muted-foreground text-sm">
-                      Specialized in delivering front-end, back-end, and mobile app solutions to clients.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Founder, NETIZENS IT SOLUTION</h4>
-                    <p className="text-muted-foreground text-sm">
-                      Co-founder and partner, leading a technology solutions company focused on innovative services.
+                      Specialized in delivering front-end, back-end, and Automation solutions to clients.
                     </p>
                   </div>
                 </div>
