@@ -14,12 +14,13 @@ export function ProjectsGrid({ projects, isInView }: ProjectsGridProps) {
       aria-label="Projects grid"
     >
       {projects.map((project, index) => (
-        <ProjectCard
-          key={project.title}
-          project={project}
-          index={index}
-          isInView={isInView}
-        />
+        <div role="listitem" key={project.title}>
+          <ProjectCard
+            project={project}
+            index={index}
+            isInView={isInView}
+          />
+        </div>
       ))}
     </div>
   );
