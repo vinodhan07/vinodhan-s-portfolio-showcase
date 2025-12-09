@@ -75,7 +75,7 @@ export function About() {
                     <div>
                       <h4 className="font-semibold text-foreground">Bachelor of Computer Science and Engineering</h4>
                       <p className="text-muted-foreground text-sm">
-                        Knowledge Institute of Technology (Up to 3rd Semester)
+                        Knowledge Institute of Technology (Up to 4th Semester)
                       </p>
                       <p className="text-muted-foreground text-sm">7.5 CGPA</p>
                     </div>
