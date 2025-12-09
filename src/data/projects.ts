@@ -39,8 +39,8 @@ export const staticProjects: Project[] = [
   },
   {
     title: "Translator-Model",
-    description: "E-commerce demo application showcasing modern web development practices and responsive design.",
-    tech: ["HTML", "CSS", "JavaScript"],
+    description: "A language translation model leveraging NLP techniques for accurate multilingual text conversion and real-time translation.",
+    tech: ["HTML", "CSS", "JavaScript", "NLP"],
     repoUrl: "https://github.com/vinodhan07/Translator-Model",
     featured: false,
   },
