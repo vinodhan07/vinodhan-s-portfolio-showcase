@@ -7,6 +7,7 @@ import { Projects } from "@/components/Projects";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { BackgroundEffects } from "@/components/BackgroundEffects";
+import { Chatbot } from "@/components/Chatbot";
 
 const Index = () => {
   return (
@@ -23,6 +24,7 @@ const Index = () => {
           <Contact />
         </main>
         <Footer />
+        <Chatbot />
       </div>
     </div>
   );
