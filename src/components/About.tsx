@@ -112,16 +112,24 @@ export function About() {
                   </div>
                   <div className="space-y-3">
                     <div>
-                      <h4 className="font-semibold text-foreground">Publication</h4>
-                      <p className="text-muted-foreground text-sm">
-                        A Flexible Multi-Task Structure Contextual Modality Attention based Emotion Recognition
-                      </p>
+                      <h4 className="font-semibold text-foreground">Certifications</h4>
+                      <p className="text-muted-foreground text-sm">• Prompt Engineering – Great Learning</p>
+                      <p className="text-muted-foreground text-sm">• Java Programming – Thinkverge</p>
+                      <p className="text-muted-foreground text-sm">• AI for Beginners – HP Foundation 2025</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Certifications</h4>
-                      <p className="text-muted-foreground text-sm">• Prompt Engineering (Great Learning)</p>
-                      <p className="text-muted-foreground text-sm">• Java Programming (Thinkverge)</p>
-                      <p className="text-muted-foreground text-sm">• AI for Beginners (HP Foundation)</p>
+                      <h4 className="font-semibold text-foreground">Hackathon Excellence</h4>
+                      <p className="text-muted-foreground text-sm">• Finalist in Urban Vision Hackathon 2025</p>
+                      <p className="text-muted-foreground text-sm">• Finalist in BNKHUB – Led AI development team delivering production-style GenAI solution</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Research & Publication</h4>
+                      <p className="text-muted-foreground text-sm">• Published paper in the domain of multimodal AI</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Leadership</h4>
+                      <p className="text-muted-foreground text-sm">• Secretary – Rotaract Club</p>
+                      <p className="text-muted-foreground text-sm">• Campus Google Student Ambassador</p>
                     </div>
                   </div>
                 </motion.div>
