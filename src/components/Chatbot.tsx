@@ -156,18 +156,28 @@ export const Chatbot = () => {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[85%] p-3 rounded-2xl text-sm whitespace-pre-wrap ${
+                    className={`max-w-[85%] p-3 rounded-2xl text-sm ${
                       msg.role === "user"
                         ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-br-md"
                         : "bg-zinc-800 text-zinc-100 rounded-bl-md border border-zinc-700"
                     }`}
                   >
-                    {msg.content || (isLoading && idx === messages.length - 1 ? (
+                    {msg.content ? (
+                      <span 
+                        className="whitespace-pre-wrap [&_a]:text-purple-400 [&_a]:underline [&_a]:hover:text-purple-300"
+                        dangerouslySetInnerHTML={{ 
+                          __html: msg.content.replace(
+                            /\[([^\]]+)\]\(([^)]+)\)/g, 
+                            '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+                          ) 
+                        }} 
+                      />
+                    ) : (isLoading && idx === messages.length - 1 ? (
                       <span className="flex items-center gap-2">
                         <Loader2 className="w-4 h-4 animate-spin" />
                         Thinking...
                       </span>
-                    ) : msg.content)}
+                    ) : null)}
                   </div>
                 </div>
               ))}
