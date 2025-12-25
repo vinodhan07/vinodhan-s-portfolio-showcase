@@ -173,9 +173,12 @@ export const Chatbot = () => {
                         }} 
                       />
                     ) : (isLoading && idx === messages.length - 1 ? (
-                      <span className="flex items-center gap-2">
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        Thinking...
+                      <span className="flex items-center gap-1.5">
+                        <span className="flex gap-1">
+                          <span className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                          <span className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                          <span className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                        </span>
                       </span>
                     ) : null)}
                   </div>
