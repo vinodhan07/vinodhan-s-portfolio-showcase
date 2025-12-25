@@ -121,7 +121,6 @@ export function About() {
                       <h4 className="font-semibold text-foreground">Hackathon Excellence</h4>
                       <p className="text-muted-foreground text-sm">• Finalist in Urban Vision Hackathon 2025</p>
                       <p className="text-muted-foreground text-sm">• Finalist in BNKHUB – Led AI development team delivering production-style GenAI solution</p>
-                      <p className="text-muted-foreground text-sm">• Special Prize – AARAM'25 UX Designathon (Cybernaut)</p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Research & Publication</h4>
@@ -158,12 +157,6 @@ export function About() {
                     </p>
                     <p className="text-muted-foreground text-sm">
                       Engaged in full-stack development, contributing to both front-end and back-end solutions.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">n8n Automation Experience</h4>
-                    <p className="text-muted-foreground text-sm">
-                      Built AI-powered n8n automation workflows using LLMs for HR and communication use cases, integrating APIs and webhooks to deliver scalable pipelines that reduce manual workload and improve operational efficiency.
                     </p>
                   </div>
                   <div>
