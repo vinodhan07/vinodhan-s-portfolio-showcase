@@ -119,6 +119,7 @@ export function About() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Hackathon Excellence</h4>
+                      <p className="text-muted-foreground text-sm">• Special Prize – AARAM'25 UX Designathon (Cybernaut) – Recognized for creativity and innovation in a 24-hour UI/UX design competition</p>
                       <p className="text-muted-foreground text-sm">• Finalist in Urban Vision Hackathon 2025</p>
                       <p className="text-muted-foreground text-sm">• Finalist in BNKHUB – Led AI development team delivering production-style GenAI solution</p>
                     </div>
@@ -150,6 +151,12 @@ export function About() {
                   <h3 className="text-2xl font-bold">Experience</h3>
                 </div>
                 <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground">n8n Automation Experience</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Built AI-powered n8n automation workflows using LLMs for HR and communication use cases, integrating APIs and webhooks to deliver scalable pipelines that reduce manual workload and improve operational efficiency.
+                    </p>
+                  </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Full Stack Developer Intern</h4>
                     <p className="text-muted-foreground text-sm mb-1">
