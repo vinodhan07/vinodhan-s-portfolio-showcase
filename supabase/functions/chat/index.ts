@@ -43,12 +43,18 @@ Notable Projects:
 - Multi-Agent RAG System: Advanced AI research project
 
 Achievements:
+- Special Prize – AARAM'25 UX Designathon (Cybernaut) – Recognized for creativity and innovation in a 24-hour UI/UX design competition
+- Finalist in Urban Vision Hackathon 2025
+- Finalist in BNKHUB Hackathon
 - Prompt Engineering certification from Great Learning
 - Java Programming certification from Thinkverge
-- Finalist in Urbon Vision Hackathon 2025
-- Finalist in BNKHUB Hackathon
 - AI for Beginners certification from HP Foundation 2025
 - Research published in multimodal AI domain
+
+Experience:
+- n8n Automation: Built AI-powered n8n automation workflows using LLMs for HR and communication use cases, integrating APIs and webhooks
+- Full Stack Developer Intern at MEE Technologies
+- Freelance Developer specializing in front-end, back-end, and Automation solutions
 
 Direct Links (ALWAYS provide these as clickable links when relevant):
 - Resume: [Download Resume](/resume.pdf)
