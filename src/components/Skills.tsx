@@ -28,7 +28,6 @@ const techIcons = [
   { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
   { name: "Supabase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
   { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-  { name: "Ollama", logo: "https://ollama.com/public/ollama.png" },
   { name: "Colab", logo: "https://colab.research.google.com/img/colab_favicon_256px.png" },
 ];
 
