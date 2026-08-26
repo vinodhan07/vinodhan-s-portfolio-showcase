@@ -45,17 +45,30 @@ export function ProjectCard({ project, index, isInView }: ProjectCardProps) {
       >
         {/* Stable card — no tilt, glow shadow on hover */}
         <motion.div
-          className="relative h-full rounded-2xl overflow-hidden cursor-pointer"
+          className="relative h-full rounded-2xl overflow-hidden cursor-pointer p-[1.5px] group"
           whileHover={{
+            scale: 1.02,
             boxShadow:
-              "0 0 0 1px rgba(var(--primary-rgb), 0.35), 0 8px 48px -8px rgba(var(--primary-rgb), 0.45)",
+              "0 12px 40px -12px rgba(var(--primary-rgb), 0.35)",
           }}
-          transition={{ duration: 0.25 }}
+          transition={{ duration: 0.3 }}
           onClick={() => setIsExpanded(true)}
           onHoverStart={() => setSweepKey((k) => k + 1)}
         >
+          {/* Rotating Conic Gradient border wrapper - active on hover */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden z-0 rounded-2xl">
+            <motion.div
+              className="absolute w-[200%] h-[200%] top-[-50%] left-[-50%]"
+              style={{
+                background: "conic-gradient(from 0deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--primary)))"
+              }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+            />
+          </div>
+
           {/* Card body */}
-          <div className="bg-card/40 backdrop-blur-md rounded-2xl border border-border/50 group-hover:border-primary/30 transition-colors duration-300 flex flex-col h-full relative overflow-hidden">
+          <div className="bg-background/90 backdrop-blur-xl rounded-2xl border border-border/50 group-hover:border-transparent transition-colors duration-300 flex flex-col h-full relative overflow-hidden z-10 w-full">
 
             {/* Light sweep — fires once per hover-enter */}
             <AnimatePresence>

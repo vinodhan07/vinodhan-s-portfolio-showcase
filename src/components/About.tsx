@@ -50,12 +50,12 @@ export function About() {
               {/* Content */}
               <div className="lg:col-span-2 space-y-8">
                 <TextReveal variant="blur" delay={0.6} className="text-muted-foreground leading-relaxed text-lg" splitBy="lines">
-                  I'm a pre-final year Computer Science student from Salem, India, building AI-driven and automation-focused software systems.
+                  I'm a Final year Computer Science student from Salem, India, an AI Engineer and Full Stack Developer building AI-Agents, Automation and Software systems.
                 </TextReveal>
                 
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   From LLM agents and n8n workflows to full-stack and{" "}
-                  <span className="text-primary font-semibold">computer vision solutions</span>, I turn ideas into scalable, real-world products.
+                  <span className="text-primary font-semibold">AI solutions</span>, I turn ideas into scalable, real-world products.
                 </p>
 
                 {/* Quote */}

@@ -3,11 +3,11 @@ export const portfolioData = {
         name: "Vinodhan V A",
         title: "AI Engineer & Full Stack Developer",
         location: "Salem, India",
-        education: "B.Tech in Computer Science and Engineering (2023-2027) at Knowledge Institute of Technology",
-        cgpa: "7.7 (Till 5th Sem)",
+        education: "B.E. in Computer Science and Engineering (2023-2027) at Knowledge Institute of Technology",
+        cgpa: "7.7 / 10",
         tagline: "CODE. SCALE. SECURE. REPEAT.",
         quote: "Turning intelligence into automation. Turning automation into impact.",
-        summary: "Pre-final year Computer Science student building AI-driven and automation-focused software systems. Expert in LLM agents, n8n workflows, full-stack development, and computer vision solutions.",
+        summary: "Final-year Computer Science student with hands-on experience building AI-powered applications, AI agents, and intelligent automation solutions using Python, FastAPI, LangGraph, and n8n.",
     },
     contact: {
         email: "vinovb21@gmail.com",
@@ -17,16 +17,16 @@ export const portfolioData = {
     },
     skills: {
         categories: [
-            "Full-stack development (Web & Mobile)",
-            "API integration & Back-end solutions",
-            "AI/ML & Automation (n8n, LLM agents)",
-            "Cloud & DevOps (Docker, AWS, Google Cloud)",
-            "UI/UX Principles",
+            "AI/ML & Agentic AI (LangGraph, OpenCLIP, FAISS, Prompt Engineering)",
+            "Full-stack development (FastAPI, React.js, PostgreSQL, MongoDB, Supabase)",
+            "Cloud & DevOps (AWS, Google Cloud, Docker, Git)",
+            "API Integration & Automation (n8n, REST APIs, Postman)",
         ],
         tools: [
-            "Python", "Java", "JavaScript", "TypeScript", "React", "Node.js", "Flutter",
-            "TensorFlow", "Ollama", "n8n", "Docker", "AWS", "Google Cloud", "Supabase",
-            "Firebase", "MongoDB", "MySQL", "R", "HTML5", "CSS3",
+            "Python", "JavaScript", "React.js", "FastAPI", "LangGraph", "n8n", "OpenCLIP", 
+            "FAISS", "PostgreSQL", "MongoDB", "Supabase", "Git", "GitHub", "Docker", 
+            "Postman", "AWS (Lightsail, Cognito, Amplify, DynamoDB, Lambda, S3)", "Google Cloud APIs", 
+            "HTML", "CSS"
         ],
     },
     experience: [
@@ -41,18 +41,18 @@ export const portfolioData = {
             description: "Engaged in full-stack development, contributing to both front-end and back-end solutions.",
         },
         {
-            title: "Freelance Developer",
+            title: "Freelance Developer & Designer",
             company: "Self-Employed",
             description: "Specialized in delivering front-end, back-end, and Automation solutions to clients.",
         },
     ],
     education: [
         {
-            degree: "Bachelor of Computer Science and Engineering",
+            degree: "B.E. Computer Science and Engineering",
             institution: "Knowledge Institute of Technology",
             duration: "2023 – 2027",
             location: "Salem, India",
-            score: "7.7 CGPA (Till 5th Sem)",
+            score: "7.7 / 10 CGPA",
         },
         {
             degree: "Higher Secondary Education (12th)",
@@ -71,9 +71,9 @@ export const portfolioData = {
     ],
     projects: [
         {
-            title: "AI-Based Image Similarity & Web Scraping Tool",
-            description: "An AI-powered image similarity system built using OpenCLIP embeddings and FAISS vector search to enable high-speed visual matching across large datasets. Includes automated web scraping pipelines, metadata processing, and a full-stack FastAPI + React implementation for real-time similarity comparison.",
-            tech: ["Python", "OpenCLIP", "FAISS", "FastAPI", "React.js", "Web Scraping", "SQLite"],
+            title: "AI-Based Image Similarity Detection & Web Scraping System",
+            description: "Built an AI-powered image similarity system using OpenCLIP, FAISS, FastAPI, and Python to perform semantic image search and efficiently compare large-scale image datasets. Learned multimodal embeddings, vector databases, similarity search, web scraping, image pre-processing, API development, and scalable AI pipeline design.",
+            tech: ["Python", "FastAPI", "OpenCLIP", "FAISS", "Web Scraping", "SQLite"],
             repo: "https://github.com/vinodhan07/AI-Based-Image-Similarity-WEB-Scrapping-tool.git",
         },
         {
@@ -89,9 +89,9 @@ export const portfolioData = {
             repo: "https://github.com/vinodhan07/finai-hackops",
         },
         {
-            title: "n8n AI Automation Agents",
-            description: "Automated workflow agents built with n8n for intelligent task orchestration and process automation.",
-            tech: ["JavaScript", "n8n", "Automation", "AI"],
+            title: "LLM-Powered HR Resume Screening Automation",
+            description: "Developed an end-to-end recruitment automation system using n8n, OpenAI, Gemini, Gmail, Google Drive, Google Sheets, and REST APIs to parse resumes, evaluate candidates, and automate the hiring workflow. Gained hands-on experience in workflow automation, AI agent orchestration, API integration, and prompt engineering.",
+            tech: ["n8n", "OpenAI", "Gemini", "Gmail", "Google Sheets", "REST APIs"],
             repo: "https://github.com/vinodhan07/n8n-AI-Automation-Agents",
         },
         {
@@ -101,19 +101,20 @@ export const portfolioData = {
             repo: "https://github.com/vinodhan07/REAL-TIME-ANNOTATION-USING-VIDEOS.git",
         },
         {
-            title: "Debuggers AI --- Enterprise Multi-Agent RAG Platform",
-            description: "Enterprise-grade multi-agent RAG platform with autonomous debugging, automated testing, and intelligent code generation capabilities.",
-            tech: ["Fine-tuning", "Python", "Ollama LLM", "RAG", "LangGraph", "Postgres + Redis + Celery"],
+            title: "DeepAgent LangChain – Cognitive Scaffolding for Advanced Reasoning",
+            description: "Built a high-integrity AI agent system using Groq Llama 3.3, LangChain, and deepagents to support structured multi-step reasoning. Integrated Tavily Search for real-time validation to verify claims and reduce hallucinations, and designed a strict output framework covering query understanding, assumptions, evidence, and confidence levels.",
+            tech: ["Python", "LangChain", "Groq Llama 3.3", "Tavily Search", "deepagents"],
             repo: "https://github.com/vinodhan07/Debugger_AI",
         },
     ],
     achievements: [
-        "Published Paper: A Flexible Multi-Task Structure Contextual Modality Attention Based Emotion Recognition (IEEE)",
-        "Special Prize (Cybernaut) – AARAM'25 UX Designathon (24-hour competition)",
-        "Finalist – Urban Vision Hackathon 2025",
-        "Finalist – BNKHUB (Led AI development team)",
-        "Secretary – Rotaract Club",
-        "Campus Google Student Ambassador",
-        "Certifications: Prompt Engineering (Great Learning), Java Programming (Thinkverge), AI for Beginners (HP Foundation 2025)",
+        "President, Rotaract Club of Salem Midtown (2026-2027) — leading community service initiatives and club operations.",
+        "Google Student Ambassador & Secretary, Rotaract Club of Knowledge Institute of Technology (2025-2026).",
+        "Open Source Contributor in ECSOC — earned 580+ contribution points and successfully submitted 13 pull requests.",
+        "Secured 3rd Place at the Alliance One Code Sangram National Hackathon (36-hour hackathon, cash prize of INR 30,000).",
+        "Published Paper: 'A Flexible Multi-Task Structure Contextual Modality Attention-Based Emotion Recognition' presented at the 3rd International Conference on Sustainable Computing and Data Communication Systems (ICSCDS-2025).",
+        "Special Prize (Cybernaut) – AARAM'25 UX Designathon (24-hour competition).",
+        "Finalist – Urban Vision Hackathon 2025 & BNKHUB (Led AI development team).",
+        "Certifications: Claude Code in Action (Anthropic), Master n8n AI Agents: Build & Sell AI Agents and Automations (Udemy), Prompt Engineering (Great Learning), AI for Beginners (HP Foundation 2025).",
     ],
 };
